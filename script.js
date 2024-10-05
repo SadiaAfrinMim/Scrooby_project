@@ -112,12 +112,7 @@ const loadPost = ()=>{
 }
 
 
-// // const loadAllPost = ()=>{
-// //     fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
-// //     .then(res => res.json())
-// //     .then(data => displayAllPost(data.posts))
-// //     .catch(error => console.log(error))
-// // }
+
 
 
 const displayLoadPost = ((postAll) =>{
@@ -155,7 +150,7 @@ const displayLoadPost = ((postAll) =>{
                   </div>
               <div>
               <h3 class="text-start font-extrabold">${element.author.name}</h3>
-              <p class="text-start opacity-60">${(element.author.designation ?element.author.designation:"UNKNOWN")}</p>
+              <p class="text-start opacity-60">${(element.author.designation ?element.author.designation:"Unknown")}</p>
           </div>
       </div>
         
@@ -175,16 +170,7 @@ const displayLoadPost = ((postAll) =>{
         container.appendChild(card)
     };
 })
-// count=0
-// const clickedPost = (e)=>{
-   
-//     console.log(count);
-//     fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
-//     .then(res => res.json())
-//     .then(data => clickedfun(data.posts))
-//     .catch(error => console.log(error))
-// }
+
 
 
 loadPost()
-// // loadAllPost()
