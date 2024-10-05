@@ -68,10 +68,12 @@ const clickedPost =((discription,view_count)=>{
               <div class="flex  items-center justify-between">
             <div class="">
             <h4 class="text-xl">${discription} </h4>
-            <p>view${view_count}</p></div>
+           <div class="flex gap-2"><img class = "w-5" src="https://img.icons8.com/?size=80&id=EXZilgeG6kKh&format=png"/>
+      <p class= "font-bold text-gray-600">${view_count}</p>
+      </div>
                 <p class="opacity-50">
                   <i class="fa-solid fa-check-double text-green-500"></i> Mark
-                  as read (<span id="markAsReadCounter"></span>)
+                  as read (<span id="markAsReadCounter">0</span>)
                 </p>
               </div>
               <div class="space-y-4 *:opacity-70" id="markAsReadContainer">
@@ -170,6 +172,12 @@ const displayLoadPost = ((postAll) =>{
         container.appendChild(card)
     };
 })
+const handleCount = () =>{
+  const precount = document.getElementsByName('markAsReadCounter').innerText
+  const convertedCounter = parseInt(precount)
+  const sum = convertedCounter + 1
+  document.getElementsByName('markAsReadCounter').innerText = sum
+}
 
 
 
