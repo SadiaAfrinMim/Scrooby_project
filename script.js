@@ -104,12 +104,12 @@ const searchPostDisplay = ()=>{
 
 
 
-// const loadPost = ()=>{
-//     fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
-//     .then(res => res.json())
-//     .then(data =>displayLoadPost(data))
-//     .catch(error => console.log(error))
-// }
+const loadPost = ()=>{
+    fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
+    .then(res => res.json())
+    .then(data =>displayLoadPost(data))
+    .catch(error => console.log(error))
+}
 
 
 // // const loadAllPost = ()=>{
@@ -120,61 +120,61 @@ const searchPostDisplay = ()=>{
 // // }
 
 
-// const displayLoadPost = ((postAll) =>{
-//     console.log(postAll);
-//     const container = document.getElementById('container')
-//    for(element of postAll){ 
-//        console.log(element); 
-//        const card = document.createElement('div')
+const displayLoadPost = ((postAll) =>{
+    console.log(postAll);
+    const container = document.getElementById('container')
+   for(element of postAll){ 
+       console.log(element); 
+       const card = document.createElement('div')
        
-//        card.innerHTML = ` <div class="card pb-5 bg-base-100 shadow-2xl">
-//           <figure class="lg:px-6 px-4 pt-4 lg:pt-8">
-//               <img
-//                   src=${element.cover_image}
-//                   alt="Shoes"
-//                   class="rounded-xl"
-//               />
-//           </figure>
-//           <div class="p-5 lg:p-10 space-y-4 lg:space-y-5">
-//               <p class="opacity-50 text-start">
-//                   <i class="fa-solid fa-calendar-days me-2"></i>${(element.author.posted_date)?element.author.posted_date:"no date published"}
-//               </p>
-//               <h2 class="card-title text-start">${element.title}</h2>
-//               <p class="text-start">
-//                   ${element.description}
-//               </p>
-//               <div class="card-actions flex gap-5 items-center">
-//                   <div class="avatar">
-//                       <div
-//                           class="lg:w-12 w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
-//                       >
-//                           <img
-//                           src=${element.profile_image}
-//                           />
-//                       </div>
-//                   </div>
-//               <div>
-//               <h3 class="text-start font-extrabold">${element.author.name}</h3>
-//               <p class="text-start opacity-60">${(element.author.designation ?element.author.designation:"UNKNOWN")}</p>
-//           </div>
-//       </div>
+       card.innerHTML = ` <div class="card pb-5 bg-base-100 shadow-2xl">
+          <figure class="lg:px-6 px-4 pt-4 lg:pt-8">
+              <img
+                  src=${element.cover_image}
+                  alt="Shoes"
+                  class="rounded-xl"
+              />
+          </figure>
+          <div class="p-5 lg:p-10 space-y-4 lg:space-y-5">
+              <p class="opacity-50 text-start">
+                  <i class="fa-solid fa-calendar-days me-2"></i>${(element.author.posted_date)?element.author.posted_date:"no date published"}
+              </p>
+              <h2 class="card-title text-start">${element.title}</h2>
+              <p class="text-start">
+                  ${element.description}
+              </p>
+              <div class="card-actions flex gap-5 items-center">
+                  <div class="avatar">
+                      <div
+                          class="lg:w-12 w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
+                      >
+                          <img
+                          src=${element.profile_image}
+                          />
+                      </div>
+                  </div>
+              <div>
+              <h3 class="text-start font-extrabold">${element.author.name}</h3>
+              <p class="text-start opacity-60">${(element.author.designation ?element.author.designation:"UNKNOWN")}</p>
+          </div>
+      </div>
         
 
-//           <span
-//             id="latestPostLoader"
-//             class="loading loading-infinity loading-lg lg:mt-24 text-primary hidden"
-//           >
+          <span
+            id="latestPostLoader"
+            class="loading loading-infinity loading-lg lg:mt-24 text-primary hidden"
+          >
         
 
           
         
         
-//         </span>
-//           <!-- dynamic content -->
-//         </div>`
-//         container.append(card)
-//     };
-// })
+        </span>
+          <!-- dynamic content -->
+        </div>`
+        container.appendChild(card)
+    };
+})
 // count=0
 // const clickedPost = (e)=>{
    
@@ -186,5 +186,5 @@ const searchPostDisplay = ()=>{
 // }
 
 
-// loadPost()
+loadPost()
 // // loadAllPost()
